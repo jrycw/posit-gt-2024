@@ -6,6 +6,8 @@ This repository represents my submission for the [2024 Table Contest](https://po
   <img src="./final_table.png" width="800px">
 </div>
 
-
 ### Quick preview
 https://github.com/jrycw/posit-gt-2024/assets/67060418/66a81280-5ad9-4cd7-a9b4-1c03c0419c1c
+
+### Full tutorial
+https://jrycw.github.io/posit-gt-2024/

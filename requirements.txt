@@ -1,0 +1,7 @@
+great_tables[extra]
+polars
+pandas
+pyarrow
+ruff
+ipykernel
+jupyterlab

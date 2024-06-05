@@ -1,0 +1,1422 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.554">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Jerry Wu">
+<meta name="dcterms.date" content="2024-06-05">
+
+<title>Euro NCAP Safety Rating - 2023</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="euroncap_2023_files/libs/clipboard/clipboard.min.js"></script>
+<script src="euroncap_2023_files/libs/quarto-html/quarto.js"></script>
+<script src="euroncap_2023_files/libs/quarto-html/popper.min.js"></script>
+<script src="euroncap_2023_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="euroncap_2023_files/libs/quarto-html/anchor.min.js"></script>
+<link href="euroncap_2023_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="euroncap_2023_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="euroncap_2023_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="euroncap_2023_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="euroncap_2023_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
+
+</head>
+
+<body>
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-full">
+
+<main class="content column-page" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Euro NCAP Safety Rating - 2023</h1>
+<p class="subtitle lead">Submission for Posit 2024 Table Contest</p>
+</div>
+
+
+
+<div class="quarto-title-meta column-page">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Jerry Wu </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">2024-06-05</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><video src="quick_preview.mp4" class="img-fluid" controls=""><a href="quick_preview.mp4">Video</a></video></p>
+<figcaption>Quick preview of our project.</figcaption>
+</figure>
+</div>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">0. Introduction</h2>
+<p>This project aims to integrate the <a href="https://github.com/posit-dev/great-tables">great-tables 0.7.0</a> and <a href="https://github.com/pola-rs/polars">Polars 0.20.31</a> packages in Python to create a table displaying the ratings of 17 cars from Euro NCAP for the year 2023. You can find all the code and the tables in this <a href="https://github.com/jrycw/posit-gt-2024">repository</a>.</p>
+<p>Hereafter, I’ll use the abbreviation <code>gt</code> to refer to the Python package <strong>great-tables</strong> and <code>{gt}</code> to refer to the R package <strong>gt</strong>.</p>
+<p>We will divide the content into four parts as follows:</p>
+<ol type="1">
+<li><strong>Data Collection</strong>: Discussing where the data is gathered from and what information it includes.</li>
+<li><strong>Tweaking the Polars DataFrame</strong>: Explaining how to manipulate the collected data into a Polars DataFrame.</li>
+<li><strong>Enhancing Presentation with great-tables</strong>: Demonstrating how to transform the Polars DataFrame into a great table using <code>gt</code>.</li>
+<li><strong>Final Thoughts</strong>: Sharing some concluding thoughts and insights.</li>
+</ol>
+</section>
+<section id="data-collection" class="level2">
+<h2 class="anchored" data-anchor-id="data-collection">1. Data collection</h2>
+<p>All data, including logos, has been gathered from the <a href="https://www.euroncap.com/en/ratings-rewards/latest-safety-ratings">EuroNCAP website</a> in JSON format and stored as <code>euroncap_2023.json</code>. Next, we’ll load the data into a Polars <code>DataFrame</code> named <code>df_mini</code> using <a href="https://docs.pola.rs/py-polars/html/reference/api/polars.read_json.html">pl.read_json()</a> and preview the first row along with its column names.</p>
+<div id="9954659d-6ec0-4031-9d4b-5b15c5b3002b" class="cell" data-execution_count="1">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> enum <span class="im">import</span> Enum</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> itertools <span class="im">import</span> chain</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> typing <span class="im">import</span> Callable, Iterable</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> polars <span class="im">as</span> pl</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> great_tables <span class="im">import</span> GT, html, loc, style, system_fonts</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> polars <span class="im">import</span> selectors <span class="im">as</span> cs</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div id="3ecc1357" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>json_file <span class="op">=</span> <span class="st">"euroncap_2023.json"</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>df_mini <span class="op">=</span> pl.read_json(json_file).head(<span class="dv">1</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>df_mini</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="2">
+<div>
+<div><style>
+.dataframe > thead > tr,
+.dataframe > tbody > tr {
+  text-align: right;
+  white-space: pre-wrap;
+}
+</style>
+<small>shape: (1, 18)</small>
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th">Make</th>
+<th data-quarto-table-cell-role="th">Model</th>
+<th data-quarto-table-cell-role="th">Class</th>
+<th data-quarto-table-cell-role="th">Url</th>
+<th data-quarto-table-cell-role="th">Stars</th>
+<th data-quarto-table-cell-role="th">Frontal Impact</th>
+<th data-quarto-table-cell-role="th">Lateral Impact</th>
+<th data-quarto-table-cell-role="th">Rear Impact</th>
+<th data-quarto-table-cell-role="th">Rescue and Extrication</th>
+<th data-quarto-table-cell-role="th">Crash Test Performance</th>
+<th data-quarto-table-cell-role="th">Safety Features</th>
+<th data-quarto-table-cell-role="th">CRS Installation Check</th>
+<th data-quarto-table-cell-role="th">VRU Impact Protection</th>
+<th data-quarto-table-cell-role="th">VRU Impact Mitigation</th>
+<th data-quarto-table-cell-role="th">Speed Assistance</th>
+<th data-quarto-table-cell-role="th">Occupant Status Monitoring</th>
+<th data-quarto-table-cell-role="th">Lane Support</th>
+<th data-quarto-table-cell-role="th">AEB Car-to-Car</th>
+</tr>
+<tr class="odd">
+<th>str</th>
+<th>str</th>
+<th>str</th>
+<th>str</th>
+<th>str</th>
+<th>str</th>
+<th>str</th>
+<th>str</th>
+<th>str</th>
+<th>str</th>
+<th>str</th>
+<th>str</th>
+<th>str</th>
+<th>str</th>
+<th>str</th>
+<th>str</th>
+<th>str</th>
+<th>str</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>"BMW"</td>
+<td>"BMW 5 Series"</td>
+<td>"Large Family Car"</td>
+<td>"https://www.euroncap.com/en/re…</td>
+<td>"5"</td>
+<td>"14.0"</td>
+<td>"15.1"</td>
+<td>"3.5"</td>
+<td>"3.0"</td>
+<td>"24.0"</td>
+<td>"6.0"</td>
+<td>"12"</td>
+<td>"30.1"</td>
+<td>"24.4"</td>
+<td>"1.8"</td>
+<td>"1.3"</td>
+<td>"3.0"</td>
+<td>"8.1"</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div id="e956af01" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>df_mini.columns</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="3">
+<pre><code>['Make',
+ 'Model',
+ 'Class',
+ 'Url',
+ 'Stars',
+ 'Frontal Impact',
+ 'Lateral Impact',
+ 'Rear Impact',
+ 'Rescue and Extrication',
+ 'Crash Test Performance',
+ 'Safety Features',
+ 'CRS Installation Check',
+ 'VRU Impact Protection',
+ 'VRU Impact Mitigation',
+ 'Speed Assistance',
+ 'Occupant Status Monitoring',
+ 'Lane Support',
+ 'AEB Car-to-Car']</code></pre>
+</div>
+</div>
+<p><br>The first few columns contain basic information such as <code>Make</code>, <code>Model</code>, <code>Class</code>, and the <code>Url</code> from which the data was gathered. Following these, there’s a <code>Stars</code> column indicating the car’s rating, accompanied by thirteen columns detailing testing scores across four categories: <code>Adult Occupant</code>, <code>Child Occupant</code>, <code>Vulnerable Road Users</code>, and <code>Safety Assist</code>. It’s worth noting that there may be some rounding errors, which could lead to discrepancies in the sum of each test within each category, as compared to the numbers outlined on the website.</p>
+<p>Subsequently, we’ll define some variables related to the testing categories for later use.</p>
+<div id="7fb27b941602401d91542211134fc71a" class="cell" data-execution_count="4">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>adult_occupant_columns <span class="op">=</span> [</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Frontal Impact"</span>,</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Lateral Impact"</span>,</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Rear Impact"</span>,</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Rescue and Extrication"</span>,</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>child_occupant_columns <span class="op">=</span> [</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Crash Test Performance"</span>,</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Safety Features"</span>,</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">"CRS Installation Check"</span>,</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>vulnerable_road_users_columns <span class="op">=</span> [<span class="st">"VRU Impact Protection"</span>, <span class="st">"VRU Impact Mitigation"</span>]</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>safety_assist_columns <span class="op">=</span> [</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Speed Assistance"</span>,</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Occupant Status Monitoring"</span>,</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Lane Support"</span>,</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>    <span class="st">"AEB Car-to-Car"</span>,</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>testing_columns <span class="op">=</span> (</span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>    adult_occupant_columns</span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>    <span class="op">+</span> child_occupant_columns</span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>    <span class="op">+</span> vulnerable_road_users_columns</span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>    <span class="op">+</span> safety_assist_columns</span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>testing_groups <span class="op">=</span> (</span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>    adult_occupant_columns,</span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a>    child_occupant_columns,</span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a>    vulnerable_road_users_columns,</span>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a>    safety_assist_columns,</span>
+<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a>testing_group_names <span class="op">=</span> (<span class="st">"adult"</span>, <span class="st">"child"</span>, <span class="st">"vru"</span>, <span class="st">"assist"</span>)</span>
+<span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a>testing_columns_with_rank <span class="op">=</span> []</span>
+<span id="cb5-40"><a href="#cb5-40" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> _grp, _grp_name <span class="kw">in</span> <span class="bu">zip</span>(testing_groups, testing_group_names):</span>
+<span id="cb5-41"><a href="#cb5-41" aria-hidden="true" tabindex="-1"></a>    testing_columns_with_rank.extend(chain(_grp, [_grp_name]))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Employing the <a href="https://docs.python.org/3/library/itertools.html#itertools.chain"><code>itertools.chain</code></a> function facilitates the seamless merging of multiple iterables, treating them as a cohesive whole. From personal experience, leveraging it often streamlines tasks and saves time, particularly when combining various types of iterables.</p>
+</div>
+</div>
+</section>
+<section id="tweaking-the-poalrs-dataframe" class="level2">
+<h2 class="anchored" data-anchor-id="tweaking-the-poalrs-dataframe">2. Tweaking the Poalrs Dataframe</h2>
+<section id="consolidating-data-wrangling-into-a-single-function" class="level3">
+<h3 class="anchored" data-anchor-id="consolidating-data-wrangling-into-a-single-function">2.0 Consolidating Data Wrangling into a Single Function</h3>
+<p>We’ll apply a technique learned from <a href="https://www.linkedin.com/in/panela/">Matt Harrison</a>, the author of <em>Effective Pandas</em> and <em>Effective Polars</em>, by consolidating all adjustments into a single function called <code>tweak_df</code>. This approach allows us to easily track the modifications made to the raw data at the outset of the Jupyter notebook. First, we’ll move the previous <code>pl.read_json()</code> call into <code>tweak_df()</code> and save it as a temporary variable <code>df</code>. Then, we’ll use Polars expressions to modify or create several columns.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> tweak_df(json_file: <span class="bu">str</span>) <span class="op">-&gt;</span> pl.DataFrame:</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    df <span class="op">=</span> pl.read_json(json_file)</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    ...</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="make-column-expression" class="level3">
+<h3 class="anchored" data-anchor-id="make-column-expression">2.1 <code>Make</code> column expression</h3>
+<p>To enhance the visual appeal of the <code>Make</code> column, we’ll transform plain strings into images sourced from the URLs provided in the <code>euroncap_2023.json</code> file. These images, stored in the <code>logo</code> folder, are suffixed with either <code>.png</code> or <code>.jpg</code>. The transformation process will be handled by <code>gt</code> later. Our immediate goal is to modify the <code>Make</code> column to lowercase and append the correct suffix to each entry. For instance, the cell value for <em>BMW</em> should be <code>bmw.png</code> since the associated image is a <code>.png</code> file. Similarly, for <em>Lexus</em>, the cell value should be <code>lexus.jpg</code>. This can be achieved using the <a href="https://docs.pola.rs/py-polars/html/reference/expressions/api/polars.when.html">pl.when().then().otherwise()</a> syntax, which is the Polars equivalent of an <code>if-else</code> conditional branch, allowing us to dynamically select the appropriate suffix.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>logo_path <span class="op">=</span> Path(<span class="st">"logo"</span>)</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> tweak_df(json_file: <span class="bu">str</span>) <span class="op">-&gt;</span> pl.DataFrame:</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    ...</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    _make <span class="op">=</span> pl.col(<span class="st">"Make"</span>).<span class="bu">str</span>.to_lowercase()</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    logo_pngs <span class="op">=</span> [l.stem <span class="cf">for</span> l <span class="kw">in</span> logo_path.glob(<span class="st">"*png"</span>)]</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    make <span class="op">=</span> (</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>        pl.when(_make.is_in(logo_pngs))</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>        .then(_make.add(<span class="st">".png"</span>))</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>        .otherwise(_make.add(<span class="st">".jpg"</span>))</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="model-column-expression" class="level3">
+<h3 class="anchored" data-anchor-id="model-column-expression">2.2 <code>Model</code> column expression</h3>
+<p>In the <code>Model</code> column, we aim to format the entries as hyperlinks that direct users to the URLs containing the rating reports of the respective cars. Again, the formatting task will be delegated to <code>gt</code>. Our objective now is to construct strings in <strong>Markdown</strong> format. To accomplish this, we’ll create a function called <code>cols_merge_as_str</code> to facilitate the transformation.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> _str_exprize(elem: <span class="bu">str</span> <span class="op">|</span> pl.Expr) <span class="op">-&gt;</span> pl.Expr:</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="bu">isinstance</span>(elem, pl.Expr):</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> elem.cast(pl.Utf8)</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> pl.lit(<span class="bu">str</span>(elem))</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> cols_merge_as_str(<span class="op">*</span>elems: pl.Expr <span class="op">|</span> <span class="bu">str</span>, alias: <span class="bu">str</span> <span class="op">=</span> <span class="st">"merged_col"</span>) <span class="op">-&gt;</span> pl.Expr:</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="kw">not</span> elems:</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="st">"At least one str or Polars expression must be provided."</span>)</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>    cols <span class="op">=</span> <span class="va">None</span></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> elem <span class="kw">in</span> elems:</span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> cols <span class="kw">is</span> <span class="va">None</span>:</span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>            cols <span class="op">=</span> _str_exprize(elem)</span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>            <span class="cf">continue</span></span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>        cols <span class="op">=</span> cols.add(_str_exprize(elem))</span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> cols.alias(alias)</span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> tweak_df(json_file: <span class="bu">str</span>) <span class="op">-&gt;</span> pl.DataFrame:</span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>    ...</span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a>    model <span class="op">=</span> cols_merge_as_str(</span>
+<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a>        <span class="st">"["</span>, pl.col(<span class="st">"Model"</span>), <span class="st">"]("</span>, pl.col(<span class="st">"Url"</span>), <span class="st">")"</span>, alias<span class="op">=</span><span class="st">"Model"</span></span>
+<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You may also find the <a href="https://docs.pola.rs/py-polars/html/reference/expressions/api/polars.concat_str.html">pl.concat_str()</a> function relevant; it’s worth exploring for additional insights. Additionally, the <code>gt</code> documentation provides an <a href="https://github.com/posit-dev/great-tables/blob/main/docs/examples/sports-earnings/index.ipynb">example</a> of how to perform a similar operation using <a href="https://docs.pola.rs/py-polars/html/reference/expressions/api/polars.Expr.map_elements.html">pl.map_elements()</a>.</p>
+</div>
+</div>
+</section>
+<section id="stars-column-expression" class="level3">
+<h3 class="anchored" data-anchor-id="stars-column-expression">2.3 <code>Stars</code> column expression</h3>
+<p>While images are visually appealing, sometimes it’s convenient to express certain ideas using emojis. Therefore, for the <code>Stars</code> column, we’ll simply concatenate it with the ⭐ emoji.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> tweak_df(json_file: <span class="bu">str</span>) <span class="op">-&gt;</span> pl.DataFrame:</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    ...</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    stars <span class="op">=</span> pl.col(<span class="st">"Stars"</span>).add(<span class="st">"⭐"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="four-column-expressions-for-categories" class="level3">
+<h3 class="anchored" data-anchor-id="four-column-expressions-for-categories">2.4 Four column expressions for categories</h3>
+<p>Creating temporary columns can often simplify the process of writing downstream Polars expressions. In this case, we’ll use generator expressions to create a generator that calculates the sum for each of the four categories. It’s worth noting that functions like <a href="https://docs.pola.rs/py-polars/html/reference/expressions/api/polars.sum_horizontal.html">pl.sum_horizontal()</a> are vectorized in Polars, which eliminates the need for slow for-loops when handling operations across different columns.</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> tweak_df(json_file: <span class="bu">str</span>) <span class="op">-&gt;</span> pl.DataFrame:</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    ...</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    grps <span class="op">=</span> (</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>        pl.sum_horizontal(grp).alias(grp_name)</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> grp, grp_name <span class="kw">in</span> <span class="bu">zip</span>(testing_groups, testing_group_names)</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="subranks-column-expression" class="level3">
+<h3 class="anchored" data-anchor-id="subranks-column-expression">2.5 <code>SubRanks</code> column expression</h3>
+<p>When computing the ranks for the four <code>SubRank</code> columns, we calculate the rank for each category individually. We use the <code>min</code> method with <a href="https://docs.pola.rs/py-polars/html/reference/expressions/api/polars.Expr.rank.html">pl.Expr.rank()</a> to determine the rank. Consequently, there may be occasional gaps in the ranking if multiple entries share the same rank. Since a higher score signifies a better result, we apply <code>descending=True</code> to ensure the correct ranking order.</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> tweak_df(json_file: <span class="bu">str</span>) <span class="op">-&gt;</span> pl.DataFrame:</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    ...</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    sub_ranks <span class="op">=</span> (</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>        pl.col(grp_name).rank(<span class="st">"min"</span>, descending<span class="op">=</span><span class="va">True</span>).cast(pl.UInt8)</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> grp_name <span class="kw">in</span> testing_group_names</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="rank-column-expression" class="level3">
+<h3 class="anchored" data-anchor-id="rank-column-expression">2.6 <code>Rank</code> column expression</h3>
+<p>For the <code>Rank</code> column, we’ll use <a href="https://docs.pola.rs/py-polars/html/reference/expressions/api/polars.mean_horizontal.html">pl.mean_horizontal()</a> to calculate the average rank across the four categories. We will then rank these averages to determine the final rank using the <code>min</code> method with <code>pl.Expr.rank()</code>. Since a lower average rank is better, we’ll set <code>descending=False</code>.</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> tweak_df(json_file: <span class="bu">str</span>) <span class="op">-&gt;</span> pl.DataFrame:</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    ...</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    rank <span class="op">=</span> (</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>        pl.mean_horizontal(testing_group_names)</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>        .rank(<span class="st">"min"</span>, descending<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>        .cast(pl.UInt8)</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>        .alias(<span class="st">"Rank"</span>)</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="tweak_df-function" class="level3">
+<h3 class="anchored" data-anchor-id="tweak_df-function">2.7 <code>tweak_df()</code> function</h3>
+<p>Now, it’s time to actually tweak <code>df</code>. The function comprises six chained methods:</p>
+<ul>
+<li><code>.with_columns(pl.col(testing_columns).cast(pl.Float64))</code>: Casting all <code>testing_columns</code> to <code>pl.Float64</code>.</li>
+<li><code>.with_columns(model, make, stars, *grps)</code>: Creating or modifying the corresponding columns.</li>
+<li><code>.with_columns(sub_ranks)</code>: Adding fours <code>SubRank</code> columns.</li>
+<li><code>.with_columns(rank)</code>: Adding a <code>Rank</code> column.</li>
+<li><code>.sort("Class", "Rank", *testing_group_names, descending=[True, False] + [False] * len(testing_group_names))</code>: Sorting <code>df</code> by the specified columns in different orders.</li>
+<li><code>.select(chain(("Class", "Model", "Make", "Stars", "Rank"), testing_columns_with_rank))</code>: Rearranging the final desired columns.</li>
+</ul>
+<div class="sourceCode" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> tweak_df(json_file: <span class="bu">str</span>) <span class="op">-&gt;</span> pl.DataFrame:</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>    ...</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>        df.with_columns(pl.col(testing_columns).cast(pl.Float64))</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>        .with_columns(model, make, stars, <span class="op">*</span>grps)</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>        .with_columns(sub_ranks)</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>        .with_columns(rank)</span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>        .sort(</span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>            <span class="st">"Class"</span>,</span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>            <span class="st">"Rank"</span>,</span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>            <span class="op">*</span>testing_group_names,</span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>            descending<span class="op">=</span>[<span class="va">True</span>, <span class="va">False</span>] <span class="op">+</span> [<span class="va">False</span>] <span class="op">*</span> <span class="bu">len</span>(testing_group_names),</span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>        .select(</span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a>            chain(</span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a>                (<span class="st">"Class"</span>, <span class="st">"Model"</span>, <span class="st">"Make"</span>, <span class="st">"Stars"</span>, <span class="st">"Rank"</span>), testing_columns_with_rank</span>
+<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a>            )</span>
+<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><a href="https://docs.pola.rs/py-polars/html/reference/dataframe/api/polars.DataFrame.with_columns.html">df.with_columns()</a> and <a href="https://docs.pola.rs/py-polars/html/reference/dataframe/api/polars.DataFrame.select.html">df.select()</a> are referred to as <a href="https://docs.pola.rs/user-guide/concepts/contexts/">contexts</a>, where column expressions are applied.</li>
+<li><a href="https://docs.pola.rs/py-polars/html/reference/expressions/col.html">pl.col()</a> not only accepts a string as a column name but also multiple strings or even an iterable of strings to select multiple columns simultaneously.</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="code-snippet" class="level3">
+<h3 class="anchored" data-anchor-id="code-snippet">2.8 Code snippet</h3>
+<p>The code snippet for this section is shown below:</p>
+<div id="de873a8c" class="cell" data-execution_count="5">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>logo_path <span class="op">=</span> Path(<span class="st">"logo"</span>)</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> _str_exprize(elem: <span class="bu">str</span> <span class="op">|</span> pl.Expr) <span class="op">-&gt;</span> pl.Expr:</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="bu">isinstance</span>(elem, pl.Expr):</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> elem.cast(pl.Utf8)</span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> pl.lit(<span class="bu">str</span>(elem))</span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> cols_merge_as_str(<span class="op">*</span>elems: pl.Expr <span class="op">|</span> <span class="bu">str</span>, alias: <span class="bu">str</span> <span class="op">=</span> <span class="st">"merged_col"</span>) <span class="op">-&gt;</span> pl.Expr:</span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a><span class="co">    Parameters</span></span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a><span class="co">    ----------</span></span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a><span class="co">    elems</span></span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a><span class="co">        str or Polars expressions.</span></span>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a><span class="co">    alias</span></span>
+<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a><span class="co">        alias for the final Polars expressions.</span></span>
+<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a><span class="co">    Returns:</span></span>
+<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a><span class="co">    ----------</span></span>
+<span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a><span class="co">    pl.Expr</span></span>
+<span id="cb14-22"><a href="#cb14-22" aria-hidden="true" tabindex="-1"></a><span class="co">        Polars expressions</span></span>
+<span id="cb14-23"><a href="#cb14-23" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb14-24"><a href="#cb14-24" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="kw">not</span> elems:</span>
+<span id="cb14-25"><a href="#cb14-25" aria-hidden="true" tabindex="-1"></a>        <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="st">"At least one str or Polars expression must be provided."</span>)</span>
+<span id="cb14-26"><a href="#cb14-26" aria-hidden="true" tabindex="-1"></a>    cols <span class="op">=</span> <span class="va">None</span></span>
+<span id="cb14-27"><a href="#cb14-27" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> elem <span class="kw">in</span> elems:</span>
+<span id="cb14-28"><a href="#cb14-28" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> cols <span class="kw">is</span> <span class="va">None</span>:</span>
+<span id="cb14-29"><a href="#cb14-29" aria-hidden="true" tabindex="-1"></a>            cols <span class="op">=</span> _str_exprize(elem)</span>
+<span id="cb14-30"><a href="#cb14-30" aria-hidden="true" tabindex="-1"></a>            <span class="cf">continue</span></span>
+<span id="cb14-31"><a href="#cb14-31" aria-hidden="true" tabindex="-1"></a>        cols <span class="op">=</span> cols.add(_str_exprize(elem))</span>
+<span id="cb14-32"><a href="#cb14-32" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> cols.alias(alias)</span>
+<span id="cb14-33"><a href="#cb14-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-34"><a href="#cb14-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-35"><a href="#cb14-35" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> tweak_df(json_file: <span class="bu">str</span>) <span class="op">-&gt;</span> pl.DataFrame:</span>
+<span id="cb14-36"><a href="#cb14-36" aria-hidden="true" tabindex="-1"></a>    df <span class="op">=</span> pl.read_json(json_file)</span>
+<span id="cb14-37"><a href="#cb14-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-38"><a href="#cb14-38" aria-hidden="true" tabindex="-1"></a>    _make <span class="op">=</span> pl.col(<span class="st">"Make"</span>).<span class="bu">str</span>.to_lowercase()</span>
+<span id="cb14-39"><a href="#cb14-39" aria-hidden="true" tabindex="-1"></a>    logo_pngs <span class="op">=</span> [l.stem <span class="cf">for</span> l <span class="kw">in</span> logo_path.glob(<span class="st">"*png"</span>)]</span>
+<span id="cb14-40"><a href="#cb14-40" aria-hidden="true" tabindex="-1"></a>    make <span class="op">=</span> (</span>
+<span id="cb14-41"><a href="#cb14-41" aria-hidden="true" tabindex="-1"></a>        pl.when(_make.is_in(logo_pngs))</span>
+<span id="cb14-42"><a href="#cb14-42" aria-hidden="true" tabindex="-1"></a>        .then(_make.add(<span class="st">".png"</span>))</span>
+<span id="cb14-43"><a href="#cb14-43" aria-hidden="true" tabindex="-1"></a>        .otherwise(_make.add(<span class="st">".jpg"</span>))</span>
+<span id="cb14-44"><a href="#cb14-44" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb14-45"><a href="#cb14-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-46"><a href="#cb14-46" aria-hidden="true" tabindex="-1"></a>    model <span class="op">=</span> cols_merge_as_str(</span>
+<span id="cb14-47"><a href="#cb14-47" aria-hidden="true" tabindex="-1"></a>        <span class="st">"["</span>, pl.col(<span class="st">"Model"</span>), <span class="st">"]("</span>, pl.col(<span class="st">"Url"</span>), <span class="st">")"</span>, alias<span class="op">=</span><span class="st">"Model"</span></span>
+<span id="cb14-48"><a href="#cb14-48" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb14-49"><a href="#cb14-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-50"><a href="#cb14-50" aria-hidden="true" tabindex="-1"></a>    stars <span class="op">=</span> pl.col(<span class="st">"Stars"</span>).add(<span class="st">"⭐"</span>)</span>
+<span id="cb14-51"><a href="#cb14-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-52"><a href="#cb14-52" aria-hidden="true" tabindex="-1"></a>    grps <span class="op">=</span> (</span>
+<span id="cb14-53"><a href="#cb14-53" aria-hidden="true" tabindex="-1"></a>        pl.sum_horizontal(grp).alias(grp_name)</span>
+<span id="cb14-54"><a href="#cb14-54" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> grp, grp_name <span class="kw">in</span> <span class="bu">zip</span>(testing_groups, testing_group_names)</span>
+<span id="cb14-55"><a href="#cb14-55" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb14-56"><a href="#cb14-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-57"><a href="#cb14-57" aria-hidden="true" tabindex="-1"></a>    sub_ranks <span class="op">=</span> (</span>
+<span id="cb14-58"><a href="#cb14-58" aria-hidden="true" tabindex="-1"></a>        pl.col(grp_name).rank(<span class="st">"min"</span>, descending<span class="op">=</span><span class="va">True</span>).cast(pl.UInt8)</span>
+<span id="cb14-59"><a href="#cb14-59" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> grp_name <span class="kw">in</span> testing_group_names</span>
+<span id="cb14-60"><a href="#cb14-60" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb14-61"><a href="#cb14-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-62"><a href="#cb14-62" aria-hidden="true" tabindex="-1"></a>    rank <span class="op">=</span> (</span>
+<span id="cb14-63"><a href="#cb14-63" aria-hidden="true" tabindex="-1"></a>        pl.mean_horizontal(testing_group_names)</span>
+<span id="cb14-64"><a href="#cb14-64" aria-hidden="true" tabindex="-1"></a>        .rank(<span class="st">"min"</span>, descending<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb14-65"><a href="#cb14-65" aria-hidden="true" tabindex="-1"></a>        .cast(pl.UInt8)</span>
+<span id="cb14-66"><a href="#cb14-66" aria-hidden="true" tabindex="-1"></a>        .alias(<span class="st">"Rank"</span>)</span>
+<span id="cb14-67"><a href="#cb14-67" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb14-68"><a href="#cb14-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-69"><a href="#cb14-69" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (</span>
+<span id="cb14-70"><a href="#cb14-70" aria-hidden="true" tabindex="-1"></a>        df.with_columns(pl.col(testing_columns).cast(pl.Float64))</span>
+<span id="cb14-71"><a href="#cb14-71" aria-hidden="true" tabindex="-1"></a>        .with_columns(model, make, stars, <span class="op">*</span>grps)</span>
+<span id="cb14-72"><a href="#cb14-72" aria-hidden="true" tabindex="-1"></a>        .with_columns(sub_ranks)</span>
+<span id="cb14-73"><a href="#cb14-73" aria-hidden="true" tabindex="-1"></a>        .with_columns(rank)</span>
+<span id="cb14-74"><a href="#cb14-74" aria-hidden="true" tabindex="-1"></a>        .sort(</span>
+<span id="cb14-75"><a href="#cb14-75" aria-hidden="true" tabindex="-1"></a>            <span class="st">"Class"</span>,</span>
+<span id="cb14-76"><a href="#cb14-76" aria-hidden="true" tabindex="-1"></a>            <span class="st">"Rank"</span>,</span>
+<span id="cb14-77"><a href="#cb14-77" aria-hidden="true" tabindex="-1"></a>            <span class="op">*</span>testing_group_names,</span>
+<span id="cb14-78"><a href="#cb14-78" aria-hidden="true" tabindex="-1"></a>            descending<span class="op">=</span>[<span class="va">True</span>, <span class="va">False</span>] <span class="op">+</span> [<span class="va">False</span>] <span class="op">*</span> <span class="bu">len</span>(testing_group_names),</span>
+<span id="cb14-79"><a href="#cb14-79" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb14-80"><a href="#cb14-80" aria-hidden="true" tabindex="-1"></a>        .select(</span>
+<span id="cb14-81"><a href="#cb14-81" aria-hidden="true" tabindex="-1"></a>            chain(</span>
+<span id="cb14-82"><a href="#cb14-82" aria-hidden="true" tabindex="-1"></a>                (<span class="st">"Class"</span>, <span class="st">"Model"</span>, <span class="st">"Make"</span>, <span class="st">"Stars"</span>, <span class="st">"Rank"</span>), testing_columns_with_rank</span>
+<span id="cb14-83"><a href="#cb14-83" aria-hidden="true" tabindex="-1"></a>            )</span>
+<span id="cb14-84"><a href="#cb14-84" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb14-85"><a href="#cb14-85" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb14-86"><a href="#cb14-86" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-87"><a href="#cb14-87" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-88"><a href="#cb14-88" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> tweak_df(json_file)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+</section>
+<section id="enhancing-presentation-with-great-tables" class="level2">
+<h2 class="anchored" data-anchor-id="enhancing-presentation-with-great-tables">3. Enhancing presentation with great-tables</h2>
+<section id="refining-table-presentation-with-pipeline" class="level3">
+<h3 class="anchored" data-anchor-id="refining-table-presentation-with-pipeline">3.0 Refining Table Presentation with Pipeline</h3>
+<p>The core concept of utilizing the pipeline is that each callable (typically a function) receives an instance of a <code>GT</code> object as the first input parameter and returns an instance of a <code>GT</code> object. This allows us to chain multiple callables together, forming a pipeline.</p>
+<p>In this section, we’ll gradually build each callable and observe how the table is constructed. Instead of rendering the table in HTML directly, we’ll use the <code>make_table()</code> function to generate multiple <strong>PNG</strong> tables, which internally calls <a href="https://posit-dev.github.io/great-tables/reference/GT.save.html#great_tables.GT.save">GT.save()</a>. These tables will be shown at the end of each subsection. This approach allows us to save each progress step in the <code>tables</code> folder. However, since the hyperlinks in the table won’t be functional when saved in <strong>PNG</strong> format, this is a minor drawback I hope you can accept.</p>
+<div id="6a4c5b87" class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> make_table(</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>    gtbl: GT,</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>    <span class="op">*</span>funcs: Callable[[GT], GT] <span class="op">|</span> Iterable[Callable[[GT], GT]],</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>    tbl_dir: <span class="bu">str</span> <span class="op">|</span> Path <span class="op">=</span> <span class="st">"tables"</span>,</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>    save_png: <span class="bu">bool</span> <span class="op">=</span> <span class="va">False</span>,</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>) <span class="op">-&gt;</span> GT:</span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>    first <span class="op">=</span> funcs[<span class="dv">0</span>]</span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="bu">isinstance</span>(first, Iterable) <span class="kw">and</span> <span class="bu">len</span>(funcs) <span class="op">==</span> <span class="dv">1</span>:</span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>        funcs <span class="op">=</span> first</span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>    table_dir <span class="op">=</span> Path(tbl_dir)</span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>    table_dir.mkdir(exist_ok<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i, func <span class="kw">in</span> <span class="bu">enumerate</span>(funcs, start<span class="op">=</span><span class="dv">1</span>):</span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a>        gtbl <span class="op">=</span> func(gtbl)</span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> save_png:</span>
+<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a>            gtbl.save(<span class="bu">str</span>(table_dir <span class="op">/</span> <span class="ss">f"</span><span class="sc">{</span>i<span class="sc">:02}</span><span class="ss">_</span><span class="sc">{</span>func<span class="sc">.</span><span class="va">__name__</span><span class="sc">}</span><span class="ss">.png"</span>))</span>
+<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> gtbl</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Before moving on, we need to define the color palette for later use. Next, we’ll set up some boilerplate code for the table labels. Fortunately, <code>gt</code> offers <a href="https://posit-dev.github.io/great-tables/reference/html.html">GT.html()</a> and <a href="https://posit-dev.github.io/great-tables/reference/md.html">GT.md()</a> utility functions to assist us. The numbers used here can be easily found in the rating report.</p>
+<div id="834808b6" class="cell" data-execution_count="7">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> EuroNCAPPalette(<span class="bu">str</span>, Enum):</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>    TABLE_BACKGROUND: <span class="bu">str</span> <span class="op">=</span> <span class="st">"#F5F5F5"</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>    HIGHLIGHT1: <span class="bu">str</span> <span class="op">=</span> <span class="st">"#C0DA80"</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>    HIGHLIGHT2: <span class="bu">str</span> <span class="op">=</span> <span class="st">"#C3EBD7"</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>    HIGHLIGHT3: <span class="bu">str</span> <span class="op">=</span> <span class="st">"#A0E0D0"</span></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>    STUB_COLUMN_LABEL: <span class="bu">str</span> <span class="op">=</span> <span class="st">"#D4E6A8"</span></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>    ROW_GROUP: <span class="bu">str</span> <span class="op">=</span> <span class="st">"#BFE2A7"</span></span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>    CELL: <span class="bu">str</span> <span class="op">=</span> <span class="st">"#F4FAF1"</span></span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>    TITLE: <span class="bu">str</span> <span class="op">=</span> <span class="st">"#30937B"</span></span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>    GRADIENT1: <span class="bu">str</span> <span class="op">=</span> <span class="st">"#E7CE91"</span></span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>    GRADIENT2: <span class="bu">str</span> <span class="op">=</span> <span class="st">"#F2E4C0"</span></span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>    GRADIENT3: <span class="bu">str</span> <span class="op">=</span> <span class="st">"#F5EFE7"</span></span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a>domain_nominal_max <span class="op">=</span> {</span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Frontal Impact"</span>: <span class="dv">16</span>,</span>
+<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Lateral Impact"</span>: <span class="dv">16</span>,</span>
+<span id="cb16-18"><a href="#cb16-18" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Rear Impact"</span>: <span class="dv">4</span>,</span>
+<span id="cb16-19"><a href="#cb16-19" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Rescue and Extrication"</span>: <span class="dv">4</span>,</span>
+<span id="cb16-20"><a href="#cb16-20" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Crash Test Performance"</span>: <span class="dv">24</span>,</span>
+<span id="cb16-21"><a href="#cb16-21" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Safety Features"</span>: <span class="dv">13</span>,</span>
+<span id="cb16-22"><a href="#cb16-22" aria-hidden="true" tabindex="-1"></a>    <span class="st">"CRS Installation Check"</span>: <span class="dv">12</span>,</span>
+<span id="cb16-23"><a href="#cb16-23" aria-hidden="true" tabindex="-1"></a>    <span class="st">"VRU Impact Protection"</span>: <span class="dv">36</span>,</span>
+<span id="cb16-24"><a href="#cb16-24" aria-hidden="true" tabindex="-1"></a>    <span class="st">"VRU Impact Mitigation"</span>: <span class="dv">27</span>,</span>
+<span id="cb16-25"><a href="#cb16-25" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Speed Assistance"</span>: <span class="dv">3</span>,</span>
+<span id="cb16-26"><a href="#cb16-26" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Occupant Status Monitoring"</span>: <span class="dv">3</span>,</span>
+<span id="cb16-27"><a href="#cb16-27" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Lane Support"</span>: <span class="dv">3</span>,</span>
+<span id="cb16-28"><a href="#cb16-28" aria-hidden="true" tabindex="-1"></a>    <span class="st">"AEB Car-to-Car"</span>: <span class="dv">9</span>,</span>
+<span id="cb16-29"><a href="#cb16-29" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb16-30"><a href="#cb16-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-31"><a href="#cb16-31" aria-hidden="true" tabindex="-1"></a>adult_occupant_top_score <span class="op">=</span> <span class="dv">40</span></span>
+<span id="cb16-32"><a href="#cb16-32" aria-hidden="true" tabindex="-1"></a>adult_occupant_labels <span class="op">=</span> <span class="bu">zip</span>(</span>
+<span id="cb16-33"><a href="#cb16-33" aria-hidden="true" tabindex="-1"></a>    adult_occupant_columns,</span>
+<span id="cb16-34"><a href="#cb16-34" aria-hidden="true" tabindex="-1"></a>    (</span>
+<span id="cb16-35"><a href="#cb16-35" aria-hidden="true" tabindex="-1"></a>        html(</span>
+<span id="cb16-36"><a href="#cb16-36" aria-hidden="true" tabindex="-1"></a>            <span class="ss">f"Frontal&lt;br&gt;Impact&lt;br&gt;&lt;i&gt;(</span><span class="sc">{</span>domain_nominal_max[<span class="st">'Frontal Impact'</span>]<span class="sc">}</span><span class="ss">/</span><span class="sc">{</span>adult_occupant_top_score<span class="sc">}</span><span class="ss">)&lt;/i&gt;"</span></span>
+<span id="cb16-37"><a href="#cb16-37" aria-hidden="true" tabindex="-1"></a>        ),</span>
+<span id="cb16-38"><a href="#cb16-38" aria-hidden="true" tabindex="-1"></a>        html(</span>
+<span id="cb16-39"><a href="#cb16-39" aria-hidden="true" tabindex="-1"></a>            <span class="ss">f"Lateral&lt;br&gt;Impact&lt;br&gt;&lt;i&gt;(</span><span class="sc">{</span>domain_nominal_max[<span class="st">'Lateral Impact'</span>]<span class="sc">}</span><span class="ss">/</span><span class="sc">{</span>adult_occupant_top_score<span class="sc">}</span><span class="ss">)&lt;/i&gt;"</span></span>
+<span id="cb16-40"><a href="#cb16-40" aria-hidden="true" tabindex="-1"></a>        ),</span>
+<span id="cb16-41"><a href="#cb16-41" aria-hidden="true" tabindex="-1"></a>        html(</span>
+<span id="cb16-42"><a href="#cb16-42" aria-hidden="true" tabindex="-1"></a>            <span class="ss">f"Rear&lt;br&gt;Impact&lt;br&gt;&lt;i&gt;(</span><span class="sc">{</span>domain_nominal_max[<span class="st">'Rear Impact'</span>]<span class="sc">}</span><span class="ss">/</span><span class="sc">{</span>adult_occupant_top_score<span class="sc">}</span><span class="ss">)&lt;/i&gt;"</span></span>
+<span id="cb16-43"><a href="#cb16-43" aria-hidden="true" tabindex="-1"></a>        ),</span>
+<span id="cb16-44"><a href="#cb16-44" aria-hidden="true" tabindex="-1"></a>        html(</span>
+<span id="cb16-45"><a href="#cb16-45" aria-hidden="true" tabindex="-1"></a>            <span class="ss">f"Rescue&amp;&lt;br&gt;Extrication&lt;br&gt;&lt;i&gt;(</span><span class="sc">{</span>domain_nominal_max[<span class="st">'Rescue and Extrication'</span>]<span class="sc">}</span><span class="ss">/</span><span class="sc">{</span>adult_occupant_top_score<span class="sc">}</span><span class="ss">)&lt;/i&gt;"</span></span>
+<span id="cb16-46"><a href="#cb16-46" aria-hidden="true" tabindex="-1"></a>        ),</span>
+<span id="cb16-47"><a href="#cb16-47" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb16-48"><a href="#cb16-48" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb16-49"><a href="#cb16-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-50"><a href="#cb16-50" aria-hidden="true" tabindex="-1"></a>child_occupant_top_score <span class="op">=</span> <span class="dv">49</span></span>
+<span id="cb16-51"><a href="#cb16-51" aria-hidden="true" tabindex="-1"></a>child_occupant_labels <span class="op">=</span> <span class="bu">zip</span>(</span>
+<span id="cb16-52"><a href="#cb16-52" aria-hidden="true" tabindex="-1"></a>    child_occupant_columns,</span>
+<span id="cb16-53"><a href="#cb16-53" aria-hidden="true" tabindex="-1"></a>    (</span>
+<span id="cb16-54"><a href="#cb16-54" aria-hidden="true" tabindex="-1"></a>        html(</span>
+<span id="cb16-55"><a href="#cb16-55" aria-hidden="true" tabindex="-1"></a>            <span class="ss">f"Crash&lt;br&gt;Test&lt;br&gt;&lt;i&gt;(</span><span class="sc">{</span>domain_nominal_max[<span class="st">'Crash Test Performance'</span>]<span class="sc">}</span><span class="ss">/</span><span class="sc">{</span>child_occupant_top_score<span class="sc">}</span><span class="ss">)&lt;/i&gt;"</span></span>
+<span id="cb16-56"><a href="#cb16-56" aria-hidden="true" tabindex="-1"></a>        ),</span>
+<span id="cb16-57"><a href="#cb16-57" aria-hidden="true" tabindex="-1"></a>        html(</span>
+<span id="cb16-58"><a href="#cb16-58" aria-hidden="true" tabindex="-1"></a>            <span class="ss">f"Safety&lt;br&gt;Features&lt;br&gt;&lt;i&gt;(</span><span class="sc">{</span>domain_nominal_max[<span class="st">'Safety Features'</span>]<span class="sc">}</span><span class="ss">/</span><span class="sc">{</span>child_occupant_top_score<span class="sc">}</span><span class="ss">)&lt;/i&gt;"</span></span>
+<span id="cb16-59"><a href="#cb16-59" aria-hidden="true" tabindex="-1"></a>        ),</span>
+<span id="cb16-60"><a href="#cb16-60" aria-hidden="true" tabindex="-1"></a>        html(</span>
+<span id="cb16-61"><a href="#cb16-61" aria-hidden="true" tabindex="-1"></a>            <span class="ss">f"CRS&lt;br&gt;Installation&lt;br&gt;Check&lt;br&gt;&lt;i&gt;(</span><span class="sc">{</span>domain_nominal_max[<span class="st">'CRS Installation Check'</span>]<span class="sc">}</span><span class="ss">/</span><span class="sc">{</span>child_occupant_top_score<span class="sc">}</span><span class="ss">)&lt;/i&gt;"</span></span>
+<span id="cb16-62"><a href="#cb16-62" aria-hidden="true" tabindex="-1"></a>        ),</span>
+<span id="cb16-63"><a href="#cb16-63" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb16-64"><a href="#cb16-64" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb16-65"><a href="#cb16-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-66"><a href="#cb16-66" aria-hidden="true" tabindex="-1"></a>vulnerable_road_users_score <span class="op">=</span> <span class="dv">63</span></span>
+<span id="cb16-67"><a href="#cb16-67" aria-hidden="true" tabindex="-1"></a>vulnerable_road_users_labels <span class="op">=</span> <span class="bu">zip</span>(</span>
+<span id="cb16-68"><a href="#cb16-68" aria-hidden="true" tabindex="-1"></a>    vulnerable_road_users_columns,</span>
+<span id="cb16-69"><a href="#cb16-69" aria-hidden="true" tabindex="-1"></a>    (</span>
+<span id="cb16-70"><a href="#cb16-70" aria-hidden="true" tabindex="-1"></a>        <span class="co"># add empty space</span></span>
+<span id="cb16-71"><a href="#cb16-71" aria-hidden="true" tabindex="-1"></a>        html(</span>
+<span id="cb16-72"><a href="#cb16-72" aria-hidden="true" tabindex="-1"></a>            <span class="ss">f"Impact&amp;nbsp;&lt;br&gt;Protection&amp;nbsp;&lt;br&gt;&lt;i&gt;(</span><span class="sc">{</span>domain_nominal_max[<span class="st">'VRU Impact Protection'</span>]<span class="sc">}</span><span class="ss">/</span><span class="sc">{</span>vulnerable_road_users_score<span class="sc">}</span><span class="ss">)&amp;nbsp;&lt;/i&gt;"</span></span>
+<span id="cb16-73"><a href="#cb16-73" aria-hidden="true" tabindex="-1"></a>        ),</span>
+<span id="cb16-74"><a href="#cb16-74" aria-hidden="true" tabindex="-1"></a>        html(</span>
+<span id="cb16-75"><a href="#cb16-75" aria-hidden="true" tabindex="-1"></a>            <span class="ss">f"Impact&amp;nbsp;&lt;br&gt;Mitigation&amp;nbsp;&lt;br&gt;&lt;i&gt;(</span><span class="sc">{</span>domain_nominal_max[<span class="st">'VRU Impact Mitigation'</span>]<span class="sc">}</span><span class="ss">/</span><span class="sc">{</span>vulnerable_road_users_score<span class="sc">}</span><span class="ss">)&amp;nbsp;&lt;/i&gt;"</span></span>
+<span id="cb16-76"><a href="#cb16-76" aria-hidden="true" tabindex="-1"></a>        ),</span>
+<span id="cb16-77"><a href="#cb16-77" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb16-78"><a href="#cb16-78" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb16-79"><a href="#cb16-79" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-80"><a href="#cb16-80" aria-hidden="true" tabindex="-1"></a>safety_assist_score <span class="op">=</span> <span class="dv">18</span></span>
+<span id="cb16-81"><a href="#cb16-81" aria-hidden="true" tabindex="-1"></a>safety_assist_labels <span class="op">=</span> <span class="bu">zip</span>(</span>
+<span id="cb16-82"><a href="#cb16-82" aria-hidden="true" tabindex="-1"></a>    safety_assist_columns,</span>
+<span id="cb16-83"><a href="#cb16-83" aria-hidden="true" tabindex="-1"></a>    (</span>
+<span id="cb16-84"><a href="#cb16-84" aria-hidden="true" tabindex="-1"></a>        html(</span>
+<span id="cb16-85"><a href="#cb16-85" aria-hidden="true" tabindex="-1"></a>            <span class="ss">f"Speed&lt;br&gt;Assistance&lt;br&gt;&lt;i&gt;(</span><span class="sc">{</span>domain_nominal_max[<span class="st">'Speed Assistance'</span>]<span class="sc">}</span><span class="ss">/</span><span class="sc">{</span>safety_assist_score<span class="sc">}</span><span class="ss">)&lt;/i&gt;"</span></span>
+<span id="cb16-86"><a href="#cb16-86" aria-hidden="true" tabindex="-1"></a>        ),</span>
+<span id="cb16-87"><a href="#cb16-87" aria-hidden="true" tabindex="-1"></a>        html(</span>
+<span id="cb16-88"><a href="#cb16-88" aria-hidden="true" tabindex="-1"></a>            <span class="ss">f"Occupant&lt;br&gt;Status&lt;br&gt;Monitoring&lt;br&gt;&lt;i&gt;(</span><span class="sc">{</span>domain_nominal_max[<span class="st">'Occupant Status Monitoring'</span>]<span class="sc">}</span><span class="ss">/</span><span class="sc">{</span>safety_assist_score<span class="sc">}</span><span class="ss">)&lt;/i&gt;"</span></span>
+<span id="cb16-89"><a href="#cb16-89" aria-hidden="true" tabindex="-1"></a>        ),</span>
+<span id="cb16-90"><a href="#cb16-90" aria-hidden="true" tabindex="-1"></a>        html(</span>
+<span id="cb16-91"><a href="#cb16-91" aria-hidden="true" tabindex="-1"></a>            <span class="ss">f"Lane&lt;br&gt;Support&lt;br&gt;&lt;i&gt;(</span><span class="sc">{</span>domain_nominal_max[<span class="st">'Lane Support'</span>]<span class="sc">}</span><span class="ss">/</span><span class="sc">{</span>safety_assist_score<span class="sc">}</span><span class="ss">)&lt;/i&gt;"</span></span>
+<span id="cb16-92"><a href="#cb16-92" aria-hidden="true" tabindex="-1"></a>        ),</span>
+<span id="cb16-93"><a href="#cb16-93" aria-hidden="true" tabindex="-1"></a>        html(</span>
+<span id="cb16-94"><a href="#cb16-94" aria-hidden="true" tabindex="-1"></a>            <span class="ss">f"AEB C2C&lt;b&gt;&lt;i&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/i&gt;&lt;/b&gt;&lt;br&gt;&lt;i&gt;(</span><span class="sc">{</span>domain_nominal_max[<span class="st">'AEB Car-to-Car'</span>]<span class="sc">}</span><span class="ss">/</span><span class="sc">{</span>safety_assist_score<span class="sc">}</span><span class="ss">)&lt;/i&gt;"</span></span>
+<span id="cb16-95"><a href="#cb16-95" aria-hidden="true" tabindex="-1"></a>        ),</span>
+<span id="cb16-96"><a href="#cb16-96" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb16-97"><a href="#cb16-97" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb16-98"><a href="#cb16-98" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-99"><a href="#cb16-99" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-100"><a href="#cb16-100" aria-hidden="true" tabindex="-1"></a>testing_labels <span class="op">=</span> <span class="bu">dict</span>(</span>
+<span id="cb16-101"><a href="#cb16-101" aria-hidden="true" tabindex="-1"></a>    chain(</span>
+<span id="cb16-102"><a href="#cb16-102" aria-hidden="true" tabindex="-1"></a>        adult_occupant_labels,</span>
+<span id="cb16-103"><a href="#cb16-103" aria-hidden="true" tabindex="-1"></a>        child_occupant_labels,</span>
+<span id="cb16-104"><a href="#cb16-104" aria-hidden="true" tabindex="-1"></a>        vulnerable_road_users_labels,</span>
+<span id="cb16-105"><a href="#cb16-105" aria-hidden="true" tabindex="-1"></a>        safety_assist_labels,</span>
+<span id="cb16-106"><a href="#cb16-106" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb16-107"><a href="#cb16-107" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You might want to check out <a href="https://github.com/posit-dev/great-tables/pull/363">GT.pipe()</a>, which may possibly be merged as you review the project.</p>
+</div>
+</div>
+</section>
+<section id="defaults" class="level3">
+<h3 class="anchored" data-anchor-id="defaults">3.1 Defaults</h3>
+<p>Before applying styling to <code>df</code> using <code>gt</code>, let’s first preview how the defaults look with <code>df</code>:</p>
+<div id="0b5fbe6d" class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> default_table(gtbl: GT) <span class="op">-&gt;</span> GT:</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> gtbl</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><img src="./tables/01_default_table.png" class="img-fluid"></p>
+</section>
+<section id="grouping_table" class="level3">
+<h3 class="anchored" data-anchor-id="grouping_table">3.2 <code>grouping_table</code></h3>
+<p>Currently, the <code>gt</code> team is working on refactoring the codebase to give users more granular control over <code>groupname_col</code> and <code>rowname_col</code>. Hence, I actually cheated a little bit to access the underlying <code>_tbl_data</code> (the Polars DataFrame <code>df</code>) for use in the pipeline.</p>
+<div id="d9bd31d0" class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> grouping_table(</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>    gtbl: GT, groupname_col: <span class="bu">str</span> <span class="op">=</span> <span class="st">"Class"</span>, rowname_col: <span class="bu">str</span> <span class="op">=</span> <span class="st">"Model"</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>) <span class="op">-&gt;</span> GT:</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> GT(gtbl._tbl_data, groupname_col<span class="op">=</span>groupname_col, rowname_col<span class="op">=</span>rowname_col)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><img src="./tables/02_grouping_table.png" class="img-fluid"></p>
+</section>
+<section id="add_formatter" class="level3">
+<h3 class="anchored" data-anchor-id="add_formatter">3.3 <code>add_formatter</code></h3>
+<p>Here we showcase the use of three types of <a href="https://posit-dev.github.io/great-tables/reference/#formatting-column-data">GT.fmt_*()</a> methods:</p>
+<ul>
+<li><code>.fmt_image("Make", path=logo_path)</code>: Rendering the located image for the <code>Make</code> column.</li>
+<li><code>.fmt_number(columns=testing_columns, decimals=1)</code>: Formatting the float numbers to one decimal place for all <code>testing_columns</code>.</li>
+<li><code>.fmt_markdown(columns=["Model"])</code>: Rendering the <strong>Markdown</strong> format in the <code>Model</code> column.</li>
+</ul>
+<div id="3b0abe0f" class="cell" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> add_formatter(gtbl: GT) <span class="op">-&gt;</span> GT:</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>        gtbl.fmt_image(<span class="st">"Make"</span>, path<span class="op">=</span>logo_path)</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>        .fmt_number(columns<span class="op">=</span>testing_columns, decimals<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>        .fmt_markdown(columns<span class="op">=</span>[<span class="st">"Model"</span>])</span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><img src="./tables/03_add_formatter.png" class="img-fluid"></p>
+</section>
+<section id="adjust_cols" class="level3">
+<h3 class="anchored" data-anchor-id="adjust_cols">3.4 <code>adjust_cols</code></h3>
+<p>The <a href="https://posit-dev.github.io/great-tables/reference/#modifying-columns">GT.cols_*()</a> methods provided by <code>gt</code> allow us to modify entire columns. Here we include four chained <code>cols_*</code> method calls:</p>
+<ul>
+<li><code>.cols_width(cols_width)</code>: Defining the column widths for corresponding columns.</li>
+<li><code>.cols_align(align="center", columns=["Make", "Stars"])</code>: Centering the alignment of the <code>Make</code> and <code>Stars</code> columns.</li>
+<li><code>.cols_align(align="right", columns=["Rank"])</code>: Aligning the <code>Rank</code> column to the right.</li>
+<li><code>.cols_label(**cols_label)</code>: Renaming the labels for the respective columns.</li>
+</ul>
+<p>It’s important to note that the <code>GT.cols_label()</code> method doesn’t actually change the names of the columns in <code>df</code>; it only changes the display names.</p>
+<div id="3ce41238" class="cell" data-execution_count="11">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> adjust_cols(gtbl: GT) <span class="op">-&gt;</span> GT:</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>    cols_width <span class="op">=</span> <span class="bu">dict</span>.fromkeys(testing_columns, <span class="st">"60px"</span>) <span class="op">|</span> <span class="bu">dict</span>.fromkeys(</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>        testing_group_names, <span class="st">"30px"</span></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>    cols_label <span class="op">=</span> (</span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>        {<span class="st">"Rank"</span>: html(<span class="st">"&lt;b&gt;Rank&lt;i&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/i&gt;&lt;/b&gt;"</span>)}</span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>        <span class="op">|</span> testing_labels</span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a>        <span class="op">|</span> <span class="bu">dict</span>.fromkeys(testing_group_names, html(<span class="ss">f"&lt;b&gt;SRank&lt;i&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/i&gt;&lt;/b&gt;"</span>))</span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (</span>
+<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a>        gtbl.cols_width(cols_width)</span>
+<span id="cb20-12"><a href="#cb20-12" aria-hidden="true" tabindex="-1"></a>        .cols_align(align<span class="op">=</span><span class="st">"center"</span>, columns<span class="op">=</span>[<span class="st">"Make"</span>, <span class="st">"Stars"</span>])</span>
+<span id="cb20-13"><a href="#cb20-13" aria-hidden="true" tabindex="-1"></a>        .cols_align(align<span class="op">=</span><span class="st">"right"</span>, columns<span class="op">=</span>[<span class="st">"Rank"</span>, <span class="op">*</span>testing_group_names])</span>
+<span id="cb20-14"><a href="#cb20-14" aria-hidden="true" tabindex="-1"></a>        .cols_label(<span class="op">**</span>cols_label)</span>
+<span id="cb20-15"><a href="#cb20-15" aria-hidden="true" tabindex="-1"></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><img src="./tables/04_adjust_cols.png" class="img-fluid"></p>
+</section>
+<section id="add_tab_header" class="level3">
+<h3 class="anchored" data-anchor-id="add_tab_header">3.5 <code>add_tab_header</code></h3>
+<p>The <a href="https://posit-dev.github.io/great-tables/reference/GT.tab_header.html#great_tables.GT.tab_header">GT.tab_header()</a> method allows us to define a <code>title</code> and <code>subtitle</code>.</p>
+<div id="7dc3814b" class="cell" data-execution_count="12">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> add_tab_header(gtbl: GT) <span class="op">-&gt;</span> GT:</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> gtbl.tab_header(</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>        title<span class="op">=</span>html(</span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>            <span class="ss">f"""&lt;h1&gt;&lt;span style="color: </span><span class="sc">{</span>EuroNCAPPalette<span class="sc">.</span>TITLE<span class="sc">.</span>value<span class="sc">}</span><span class="ss">"&gt;Euro NCAP SAFETY RATINGS - 2023&lt;/span&gt;&lt;/h1&gt;"""</span></span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>        ),</span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>        subtitle<span class="op">=</span>html(<span class="st">"""&lt;h2&gt;The more stars, the better.&lt;/h2&gt;"""</span>),</span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><img src="./tables/05_add_tab_header.png" class="img-fluid"></p>
+</section>
+<section id="add_tab_spanner" class="level3">
+<h3 class="anchored" data-anchor-id="add_tab_spanner">3.6 <code>add_tab_spanner</code></h3>
+<p>The <a href="https://posit-dev.github.io/great-tables/reference/GT.tab_spanner.html#great_tables.GT.tab_spanner">GT.tab_spanner()</a> method allows us to group different columns together. Here, we consecutively call it five times to create five spanners.</p>
+<div id="8bb24072" class="cell" data-execution_count="13">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> a_html(text: <span class="bu">str</span>, url: <span class="bu">str</span>, is_bold: <span class="bu">bool</span> <span class="op">=</span> <span class="va">True</span>, align: <span class="bu">str</span> <span class="op">=</span> <span class="st">"center"</span>) <span class="op">-&gt;</span> html:</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>    fragment <span class="op">=</span> <span class="st">'&lt;a href="</span><span class="sc">{url}</span><span class="st">" style="float: </span><span class="sc">{align}</span><span class="st">;"&gt;</span><span class="sc">{text}</span><span class="st">&lt;/a&gt;'</span></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> is_bold:</span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>        fragment <span class="op">=</span> <span class="ss">f"&lt;b&gt;</span><span class="sc">{</span>fragment<span class="sc">}</span><span class="ss">&lt;/b&gt;"</span></span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> html(fragment.<span class="bu">format</span>(url<span class="op">=</span>url, text<span class="op">=</span>text, align<span class="op">=</span>align))</span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> add_tab_spanner(gtbl: GT) <span class="op">-&gt;</span> GT:</span>
+<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a>    gtbl <span class="op">=</span> gtbl.tab_spanner(</span>
+<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a>        a_html(</span>
+<span id="cb22-11"><a href="#cb22-11" aria-hidden="true" tabindex="-1"></a>            <span class="st">"Rating"</span>, <span class="st">"https://www.euroncap.com/en/car-safety/the-ratings-explained/"</span></span>
+<span id="cb22-12"><a href="#cb22-12" aria-hidden="true" tabindex="-1"></a>        ),</span>
+<span id="cb22-13"><a href="#cb22-13" aria-hidden="true" tabindex="-1"></a>        columns<span class="op">=</span>[<span class="st">"Stars"</span>, <span class="st">"Rank"</span>],</span>
+<span id="cb22-14"><a href="#cb22-14" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb22-15"><a href="#cb22-15" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb22-16"><a href="#cb22-16" aria-hidden="true" tabindex="-1"></a>    labels <span class="op">=</span> (</span>
+<span id="cb22-17"><a href="#cb22-17" aria-hidden="true" tabindex="-1"></a>        a_html(</span>
+<span id="cb22-18"><a href="#cb22-18" aria-hidden="true" tabindex="-1"></a>            <span class="st">"Adult Occupant"</span>,</span>
+<span id="cb22-19"><a href="#cb22-19" aria-hidden="true" tabindex="-1"></a>            <span class="st">"https://www.euroncap.com/en/car-safety/the-ratings-explained/adult-occupant-protection/"</span>,</span>
+<span id="cb22-20"><a href="#cb22-20" aria-hidden="true" tabindex="-1"></a>        ),</span>
+<span id="cb22-21"><a href="#cb22-21" aria-hidden="true" tabindex="-1"></a>        a_html(</span>
+<span id="cb22-22"><a href="#cb22-22" aria-hidden="true" tabindex="-1"></a>            <span class="st">"Child Occupant"</span>,</span>
+<span id="cb22-23"><a href="#cb22-23" aria-hidden="true" tabindex="-1"></a>            <span class="st">"https://www.euroncap.com/en/car-safety/the-ratings-explained/child-occupant-protection/"</span>,</span>
+<span id="cb22-24"><a href="#cb22-24" aria-hidden="true" tabindex="-1"></a>        ),</span>
+<span id="cb22-25"><a href="#cb22-25" aria-hidden="true" tabindex="-1"></a>        a_html(</span>
+<span id="cb22-26"><a href="#cb22-26" aria-hidden="true" tabindex="-1"></a>            <span class="st">"Vulnerable Road Users"</span>,</span>
+<span id="cb22-27"><a href="#cb22-27" aria-hidden="true" tabindex="-1"></a>            <span class="st">"https://www.euroncap.com/en/car-safety/the-ratings-explained/vulnerable-road-user-vru-protection/"</span>,</span>
+<span id="cb22-28"><a href="#cb22-28" aria-hidden="true" tabindex="-1"></a>        ),</span>
+<span id="cb22-29"><a href="#cb22-29" aria-hidden="true" tabindex="-1"></a>        a_html(</span>
+<span id="cb22-30"><a href="#cb22-30" aria-hidden="true" tabindex="-1"></a>            <span class="st">"Safety Assist"</span>,</span>
+<span id="cb22-31"><a href="#cb22-31" aria-hidden="true" tabindex="-1"></a>            <span class="st">"https://www.euroncap.com/en/car-safety/the-ratings-explained/safety-assist/"</span>,</span>
+<span id="cb22-32"><a href="#cb22-32" aria-hidden="true" tabindex="-1"></a>        ),</span>
+<span id="cb22-33"><a href="#cb22-33" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb22-34"><a href="#cb22-34" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> label, grp, grp_name <span class="kw">in</span> <span class="bu">zip</span>(labels, testing_groups, testing_group_names):</span>
+<span id="cb22-35"><a href="#cb22-35" aria-hidden="true" tabindex="-1"></a>        gtbl <span class="op">=</span> gtbl.tab_spanner(label, columns<span class="op">=</span>[<span class="op">*</span>grp, grp_name])</span>
+<span id="cb22-36"><a href="#cb22-36" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> gtbl</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><img src="./tables/06_add_tab_spanner.png" class="img-fluid"></p>
+</section>
+<section id="add_tab_stubhead" class="level3">
+<h3 class="anchored" data-anchor-id="add_tab_stubhead">3.7 <code>add_tab_stubhead</code></h3>
+<p>Here we’ll set up the stubhead as the EuroNCAP logo (downloaded from this <a href="https://www.euroncap.com/gfx/Euro%20NCAP%20logo%202023_pos.svg">URL</a>) in <strong>SVG</strong> format using <a href="https://posit-dev.github.io/great-tables/reference/GT.tab_stubhead.html#great_tables.GT.tab_stubhead">GT.tab_stubhead()</a>.</p>
+<div id="acae54e37e7d407bbb7b55eff062a284" class="cell" data-execution_count="14">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> add_tab_stubhead(gtbl: GT) <span class="op">-&gt;</span> GT:</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>    img_src <span class="op">=</span> <span class="st">"https://raw.githubusercontent.com/jrycw/posit-gt-2024/master/euroncap_logo/euroncap_pos.svg"</span></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> gtbl.tab_stubhead(html(<span class="ss">f'&lt;img src="</span><span class="sc">{</span>img_src<span class="sc">}</span><span class="ss">"/&gt;&lt;/br&gt;&lt;/br&gt;'</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><img src="./tables/07_add_tab_stubhead.png" class="img-fluid"></p>
+</section>
+<section id="add_tab_option" class="level3">
+<h3 class="anchored" data-anchor-id="add_tab_option">3.8 <code>add_tab_option</code></h3>
+<p><a href="https://posit-dev.github.io/great-tables/reference/GT.tab_options.html#great_tables.GT.tab_options">GT.tab_options()</a> provides numerous options that allow us to exercise fine-grained control over the table. You should definitely explore these options and tailor them to suit your own table. Enjoy experimenting!</p>
+<div id="d62af173" class="cell" data-execution_count="15">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> add_tab_option(gtbl: GT) <span class="op">-&gt;</span> GT:</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> gtbl.tab_options(</span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>        stub_background_color<span class="op">=</span>EuroNCAPPalette.STUB_COLUMN_LABEL.value,</span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>        table_background_color<span class="op">=</span>EuroNCAPPalette.TABLE_BACKGROUND.value,</span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>        heading_align<span class="op">=</span><span class="st">"left"</span>,</span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>        heading_subtitle_font_size<span class="op">=</span><span class="st">"16px"</span>,</span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a>        heading_subtitle_font_weight<span class="op">=</span><span class="st">"bold"</span>,</span>
+<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a>        column_labels_font_size<span class="op">=</span><span class="st">"14px"</span>,</span>
+<span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a>        column_labels_background_color<span class="op">=</span>EuroNCAPPalette.STUB_COLUMN_LABEL.value,</span>
+<span id="cb24-10"><a href="#cb24-10" aria-hidden="true" tabindex="-1"></a>        row_group_font_size<span class="op">=</span><span class="st">"18px"</span>,</span>
+<span id="cb24-11"><a href="#cb24-11" aria-hidden="true" tabindex="-1"></a>        row_group_font_weight<span class="op">=</span><span class="st">"bold"</span>,</span>
+<span id="cb24-12"><a href="#cb24-12" aria-hidden="true" tabindex="-1"></a>        row_group_background_color<span class="op">=</span>EuroNCAPPalette.ROW_GROUP.value,</span>
+<span id="cb24-13"><a href="#cb24-13" aria-hidden="true" tabindex="-1"></a>        table_font_names<span class="op">=</span>system_fonts(<span class="st">"industrial"</span>),</span>
+<span id="cb24-14"><a href="#cb24-14" aria-hidden="true" tabindex="-1"></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><img src="./tables/08_add_tab_option.png" class="img-fluid"></p>
+</section>
+<section id="add_tab_style" class="level3">
+<h3 class="anchored" data-anchor-id="add_tab_style">3.9 <code>add_tab_style</code></h3>
+<p><a href="https://posit-dev.github.io/great-tables/reference/GT.tab_style.html#great_tables.GT.tab_style">GT.tab_style()</a> allows us to apply styles to specific cells using the <code>locations</code> parameter. With the help of <a href="https://posit-dev.github.io/great-tables/reference/loc.body.html#great_tables.loc.body">loc.body()</a>, we can <a href="https://posit-dev.github.io/great-tables/get-started/row-selection.html#using-polars-expressions">target rows using Polars expressions</a> and <a href="https://posit-dev.github.io/great-tables/get-started/column-selection.html#using-polars-selectors">locate columns using Polars selectors</a>, which is a neat feature provided by <code>gt</code>.</p>
+<p>Here we apply two types of styling:</p>
+<ul>
+<li>Assigning all columns a default style color <code>EuroNCAPPalette.CELL</code>.</li>
+<li>Highlighting the cars in the <code>Stars</code> column that have a five-star rating with the style color <code>EuroNCAPPalette.HIGHLIGHT1</code>.</li>
+</ul>
+<div id="b9ef9e6a" class="cell" data-execution_count="16">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> add_tab_style(gtbl: GT) <span class="op">-&gt;</span> GT:</span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> gtbl.tab_style(</span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>        style<span class="op">=</span>style.fill(color<span class="op">=</span>EuroNCAPPalette.CELL.value),</span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>        locations<span class="op">=</span>loc.body(columns<span class="op">=</span>cs.<span class="bu">all</span>()),</span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>    ).tab_style(</span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a>        style<span class="op">=</span>style.fill(color<span class="op">=</span>EuroNCAPPalette.HIGHLIGHT1.value),</span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a>        locations<span class="op">=</span>loc.body(columns<span class="op">=</span><span class="st">"Stars"</span>, rows<span class="op">=</span>pl.col(<span class="st">"Stars"</span>).eq(<span class="st">"5⭐"</span>)),</span>
+<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><img src="./tables/09_add_tab_style.png" class="img-fluid"></p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If you’re using <code>gt</code> 0.6.2 or above along with Polars 0.20.30 or above, you can use Polars expressions for column selection as well. Many thanks to <a href="https://github.com/posit-dev/great-tables/pull/368">Polars for their support</a>.</p>
+</div>
+</div>
+</section>
+<section id="add_data_color" class="level3">
+<h3 class="anchored" data-anchor-id="add_data_color">3.10 <code>add_data_color</code></h3>
+<p>Here, we’re employing <a href="https://posit-dev.github.io/great-tables/reference/GT.data_color.html#great_tables.GT.data_color">GT.data_color()</a> to achieve a gradient palette effect for the <code>Rank</code> column. This enables us to visually represent that darker cells correspond to better ranks.</p>
+<div id="03a97229" class="cell" data-execution_count="17">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> add_data_color(gtbl: GT) <span class="op">-&gt;</span> GT:</span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> gtbl.data_color(</span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>        domain<span class="op">=</span>[<span class="dv">1</span>, df.height],</span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>        palette<span class="op">=</span>[</span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>            g.value</span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a>            <span class="cf">for</span> g <span class="kw">in</span> (</span>
+<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a>                EuroNCAPPalette.GRADIENT1,</span>
+<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a>                EuroNCAPPalette.GRADIENT2,</span>
+<span id="cb26-9"><a href="#cb26-9" aria-hidden="true" tabindex="-1"></a>                EuroNCAPPalette.GRADIENT3,</span>
+<span id="cb26-10"><a href="#cb26-10" aria-hidden="true" tabindex="-1"></a>            )</span>
+<span id="cb26-11"><a href="#cb26-11" aria-hidden="true" tabindex="-1"></a>        ],</span>
+<span id="cb26-12"><a href="#cb26-12" aria-hidden="true" tabindex="-1"></a>        columns<span class="op">=</span>[<span class="st">"Rank"</span>, <span class="op">*</span>testing_group_names],</span>
+<span id="cb26-13"><a href="#cb26-13" aria-hidden="true" tabindex="-1"></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><img src="./tables/10_add_data_color.png" class="img-fluid"></p>
+</section>
+<section id="add_tab_footnote" class="level3">
+<h3 class="anchored" data-anchor-id="add_tab_footnote">3.11 <code>add_tab_footnote</code></h3>
+<p>Currently, the footnote feature is not yet implemented in <code>gt</code>. However, we can leverage <a href="https://posit-dev.github.io/great-tables/reference/GT.tab_source_note.html#great_tables.GT.tab_source_note">GT.tab_source_note()</a> to achieve a similar result.</p>
+<div id="76b74bb3" class="cell" data-execution_count="18">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> add_tab_footnote(gtbl: GT) <span class="op">-&gt;</span> GT:</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (</span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>        gtbl.tab_source_note(</span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>            html(</span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a>                <span class="st">"&lt;i&gt;&lt;sup&gt;1 &lt;/sup&gt;&lt;/i&gt;Rank is derived from the rank of the averaged ranks across the four categories."</span></span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a>            )</span>
+<span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb27-8"><a href="#cb27-8" aria-hidden="true" tabindex="-1"></a>        .tab_source_note(</span>
+<span id="cb27-9"><a href="#cb27-9" aria-hidden="true" tabindex="-1"></a>            html(</span>
+<span id="cb27-10"><a href="#cb27-10" aria-hidden="true" tabindex="-1"></a>                <span class="st">"&lt;i&gt;&lt;sup&gt;2 &lt;/sup&gt;&lt;/i&gt;SRank refers to ranking by the sum of each category."</span></span>
+<span id="cb27-11"><a href="#cb27-11" aria-hidden="true" tabindex="-1"></a>            )</span>
+<span id="cb27-12"><a href="#cb27-12" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb27-13"><a href="#cb27-13" aria-hidden="true" tabindex="-1"></a>        .tab_source_note(html(<span class="st">"&lt;i&gt;&lt;sup&gt;3 &lt;/sup&gt;&lt;/i&gt;AEB C2C stands for AEB Car-to-Car."</span>))</span>
+<span id="cb27-14"><a href="#cb27-14" aria-hidden="true" tabindex="-1"></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><img src="./tables/11_add_tab_footnote.png" class="img-fluid"></p>
+</section>
+<section id="add_source_note" class="level3">
+<h3 class="anchored" data-anchor-id="add_source_note">3.12 <code>add_source_note</code></h3>
+<p>Again, we’ll use <code>GT.tab_source_note()</code> to add the data source, the table creator, and the URL of this repository.</p>
+<div id="bb4154b8" class="cell" data-execution_count="19">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> add_source_note(gtbl: GT) <span class="op">-&gt;</span> GT:</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>    source <span class="op">=</span> <span class="st">'Source: &lt;a href="https://www.euroncap.com/en"&gt;Euro NCAP&lt;/a&gt;'</span></span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>    table <span class="op">=</span> <span class="st">'Table: &lt;a href="https://cv.ycwu.space"&gt;Jerry Wu&lt;/a&gt;'</span></span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>    repo <span class="op">=</span> <span class="st">'Repo: &lt;a href="https://github.com/jrycw/posit-gt-2024"&gt;posit-gt-2024&lt;/a&gt;'</span></span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> gtbl.tab_source_note(html(<span class="st">" | "</span>.join([source, table, repo])))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><img src="./tables/12_add_source_note.png" class="img-fluid"></p>
+</section>
+<section id="final_table" class="level3">
+<h3 class="anchored" data-anchor-id="final_table">3.13 <code>final_table</code></h3>
+<p><code>final_table</code> serves as the culminating pipeline, representing the last step in the process. In this scenario, it simply returns the table it receives without any modifications. Regarding the image, you may notice a small gray area on the right side of the table. This could be due to the use of <code>groupname_col</code> and <code>rowname_col</code>, with the current logic not fully optimized for these conditions. For now, I manually adjusted the table to remove the small pieces on the left and right sides for aesthetic reasons.</p>
+<div id="4268a1b8" class="cell" data-execution_count="20">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> final_table(gtbl: GT) <span class="op">-&gt;</span> GT:</span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> gtbl</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><img src="./tables/13_final_table.png" class="img-fluid"></p>
+</section>
+<section id="constructing-the-pipeline" class="level3">
+<h3 class="anchored" data-anchor-id="constructing-the-pipeline">3.14 Constructing the pipeline</h3>
+<p>With the <code>make_table</code> function provided at the beginning of this section, we can now easily generate our well-designed table.</p>
+<div id="3b6e1606" class="cell" data-execution_count="21">
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>pipelines <span class="op">=</span> [</span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>    default_table,</span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>    grouping_table,</span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a>    add_formatter,</span>
+<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a>    adjust_cols,</span>
+<span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a>    add_tab_header,</span>
+<span id="cb30-7"><a href="#cb30-7" aria-hidden="true" tabindex="-1"></a>    add_tab_spanner,</span>
+<span id="cb30-8"><a href="#cb30-8" aria-hidden="true" tabindex="-1"></a>    add_tab_stubhead,</span>
+<span id="cb30-9"><a href="#cb30-9" aria-hidden="true" tabindex="-1"></a>    add_tab_option,</span>
+<span id="cb30-10"><a href="#cb30-10" aria-hidden="true" tabindex="-1"></a>    add_tab_style,</span>
+<span id="cb30-11"><a href="#cb30-11" aria-hidden="true" tabindex="-1"></a>    add_data_color,</span>
+<span id="cb30-12"><a href="#cb30-12" aria-hidden="true" tabindex="-1"></a>    add_tab_footnote,</span>
+<span id="cb30-13"><a href="#cb30-13" aria-hidden="true" tabindex="-1"></a>    add_source_note,</span>
+<span id="cb30-14"><a href="#cb30-14" aria-hidden="true" tabindex="-1"></a>    final_table,</span>
+<span id="cb30-15"><a href="#cb30-15" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb30-16"><a href="#cb30-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-17"><a href="#cb30-17" aria-hidden="true" tabindex="-1"></a>awesome_table <span class="op">=</span> make_table(GT(df), pipelines, save_png<span class="op">=</span><span class="va">False</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+<section id="final-thoughts" class="level2">
+<h2 class="anchored" data-anchor-id="final-thoughts">4. Final thoughts</h2>
+<ul>
+<li><code>gt</code> is mainly maintained by <a href="https://github.com/rich-iannone"><span class="citation" data-cites="Richard">@Richard</span></a> and <a href="https://github.com/machow"><span class="citation" data-cites="Michael">@Michael</span></a>, with occasional contributions from others, including myself, <a href="https://gh.ycwu.space"><span class="citation" data-cites="jrycw">@jrycw</span></a>. Our goal is to port everything from <code>{gt}</code> to <code>gt</code>, and we welcome more contributors to help make <code>gt</code> even better. Join us if you’re interested in creating great tables!</li>
+<li>With more features being implemented in <code>gt</code>, such as functions similar to <a href="https://gt.rstudio.com/reference/fmt_url.html?q=fmt_url">fmt_url</a> and <a href="https://gt.rstudio.com/reference/cols_merge.html">cols_merge()</a> in <code>{gt}</code>, many operations can be offloaded to <code>gt</code> instead of directly manipulating the Polars DataFrame. This flexibility allows users to choose the most convenient approach for their application, whether from the data layer or the presentation layer.</li>
+<li>This project is accomplished through collaboration with AI models.</li>
+</ul>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

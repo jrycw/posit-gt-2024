@@ -133,7 +133,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ol>
 </section>
 <section id="data-collection" class="level2">
-<h2 class="anchored" data-anchor-id="data-collection">1. Data collection</h2>
+<h2 class="anchored" data-anchor-id="data-collection">1. Data Collection</h2>
 <p>All data, including logos, has been gathered from the <a href="https://www.euroncap.com/en/ratings-rewards/latest-safety-ratings">EuroNCAP website</a> in JSON format and stored as <code>euroncap_2023.json</code>. Next, we’ll load the data into a Polars <code>DataFrame</code> named <code>df_mini</code> using <a href="https://docs.pola.rs/py-polars/html/reference/api/polars.read_json.html">pl.read_json()</a> and preview the first row along with its column names.</p>
 <div id="9954659d-6ec0-4031-9d4b-5b15c5b3002b" class="cell" data-execution_count="1">
 <details class="code-fold">
@@ -327,7 +327,7 @@ Note
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    ...</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="make-column-expression" class="level3">
-<h3 class="anchored" data-anchor-id="make-column-expression">2.1 <code>Make</code> column expression</h3>
+<h3 class="anchored" data-anchor-id="make-column-expression">2.1 <code>Make</code> Column Expression</h3>
 <p>To enhance the visual appeal of the <code>Make</code> column, we’ll transform plain strings into images sourced from the URLs provided in the <code>euroncap_2023.json</code> file. These images, stored in the <code>logo</code> folder, are suffixed with either <code>.png</code> or <code>.jpg</code>. The transformation process will be handled by <code>gt</code> later. Our immediate goal is to modify the <code>Make</code> column to lowercase and append the correct suffix to each entry. For instance, the cell value for <em>BMW</em> should be <code>bmw.png</code> since the associated image is a <code>.png</code> file. Similarly, for <em>Lexus</em>, the cell value should be <code>lexus.jpg</code>. This can be achieved using the <a href="https://docs.pola.rs/py-polars/html/reference/expressions/api/polars.when.html">pl.when().then().otherwise()</a> syntax, which is the Polars equivalent of an <code>if-else</code> conditional branch, allowing us to dynamically select the appropriate suffix.</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>logo_path <span class="op">=</span> Path(<span class="st">"logo"</span>)</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -343,7 +343,7 @@ Note
 <span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="model-column-expression" class="level3">
-<h3 class="anchored" data-anchor-id="model-column-expression">2.2 <code>Model</code> column expression</h3>
+<h3 class="anchored" data-anchor-id="model-column-expression">2.2 <code>Model</code> Column Expression</h3>
 <p>In the <code>Model</code> column, we aim to format the entries as hyperlinks that direct users to the URLs containing the rating reports of the respective cars. Again, the formatting task will be delegated to <code>gt</code>. Our objective now is to construct strings in <strong>Markdown</strong> format. To accomplish this, we’ll create a function called <code>cols_merge_as_str</code> to facilitate the transformation.</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> _str_exprize(elem: <span class="bu">str</span> <span class="op">|</span> pl.Expr) <span class="op">-&gt;</span> pl.Expr:</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="bu">isinstance</span>(elem, pl.Expr):</span>
@@ -383,14 +383,14 @@ Note
 </div>
 </section>
 <section id="stars-column-expression" class="level3">
-<h3 class="anchored" data-anchor-id="stars-column-expression">2.3 <code>Stars</code> column expression</h3>
+<h3 class="anchored" data-anchor-id="stars-column-expression">2.3 <code>Stars</code> Column Expression</h3>
 <p>While images are visually appealing, sometimes it’s convenient to express certain ideas using emojis. Therefore, for the <code>Stars</code> column, we’ll simply concatenate it with the ⭐ emoji.</p>
 <div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> tweak_df(json_file: <span class="bu">str</span>) <span class="op">-&gt;</span> pl.DataFrame:</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    ...</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    stars <span class="op">=</span> pl.col(<span class="st">"Stars"</span>).add(<span class="st">"⭐"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="four-column-expressions-for-categories" class="level3">
-<h3 class="anchored" data-anchor-id="four-column-expressions-for-categories">2.4 Four column expressions for categories</h3>
+<h3 class="anchored" data-anchor-id="four-column-expressions-for-categories">2.4 Four Column Expressions for Categories</h3>
 <p>Creating temporary columns can often simplify the process of writing downstream Polars expressions. In this case, we’ll use generator expressions to create a generator that calculates the sum for each of the four categories. It’s worth noting that functions like <a href="https://docs.pola.rs/py-polars/html/reference/expressions/api/polars.sum_horizontal.html">pl.sum_horizontal()</a> are vectorized in Polars, which eliminates the need for slow for-loops when handling operations across different columns.</p>
 <div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> tweak_df(json_file: <span class="bu">str</span>) <span class="op">-&gt;</span> pl.DataFrame:</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    ...</span>
@@ -400,7 +400,7 @@ Note
 <span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="subranks-column-expression" class="level3">
-<h3 class="anchored" data-anchor-id="subranks-column-expression">2.5 <code>SubRanks</code> column expression</h3>
+<h3 class="anchored" data-anchor-id="subranks-column-expression">2.5 <code>SubRanks</code> Column Expression</h3>
 <p>When computing the ranks for the four <code>SubRank</code> columns, we calculate the rank for each category individually. We use the <code>min</code> method with <a href="https://docs.pola.rs/py-polars/html/reference/expressions/api/polars.Expr.rank.html">pl.Expr.rank()</a> to determine the rank. Consequently, there may be occasional gaps in the ranking if multiple entries share the same rank. Since a higher score signifies a better result, we apply <code>descending=True</code> to ensure the correct ranking order.</p>
 <div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> tweak_df(json_file: <span class="bu">str</span>) <span class="op">-&gt;</span> pl.DataFrame:</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    ...</span>
@@ -410,7 +410,7 @@ Note
 <span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="rank-column-expression" class="level3">
-<h3 class="anchored" data-anchor-id="rank-column-expression">2.6 <code>Rank</code> column expression</h3>
+<h3 class="anchored" data-anchor-id="rank-column-expression">2.6 <code>Rank</code> Column Expression</h3>
 <p>For the <code>Rank</code> column, we’ll use <a href="https://docs.pola.rs/py-polars/html/reference/expressions/api/polars.mean_horizontal.html">pl.mean_horizontal()</a> to calculate the average rank across the four categories. We will then rank these averages to determine the final rank using the <code>min</code> method with <code>pl.Expr.rank()</code>. Since a lower average rank is better, we’ll set <code>descending=False</code>.</p>
 <div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> tweak_df(json_file: <span class="bu">str</span>) <span class="op">-&gt;</span> pl.DataFrame:</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    ...</span>
@@ -422,7 +422,7 @@ Note
 <span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="tweak_df-function" class="level3">
-<h3 class="anchored" data-anchor-id="tweak_df-function">2.7 <code>tweak_df()</code> function</h3>
+<h3 class="anchored" data-anchor-id="tweak_df-function">2.7 <code>tweak_df()</code> Function</h3>
 <p>Now, it’s time to actually tweak <code>df</code>. The function comprises six chained methods:</p>
 <ul>
 <li><code>.with_columns(pl.col(testing_columns).cast(pl.Float64))</code>: Casting all <code>testing_columns</code> to <code>pl.Float64</code>.</li>
@@ -470,7 +470,7 @@ Note
 </div>
 </section>
 <section id="code-snippet" class="level3">
-<h3 class="anchored" data-anchor-id="code-snippet">2.8 Code snippet</h3>
+<h3 class="anchored" data-anchor-id="code-snippet">2.8 Code Snippet</h3>
 <p>The code snippet for this section is shown below:</p>
 <div id="de873a8c" class="cell" data-execution_count="5">
 <details class="code-fold">
@@ -568,11 +568,11 @@ Note
 </section>
 </section>
 <section id="enhancing-presentation-with-great-tables" class="level2">
-<h2 class="anchored" data-anchor-id="enhancing-presentation-with-great-tables">3. Enhancing presentation with great-tables</h2>
+<h2 class="anchored" data-anchor-id="enhancing-presentation-with-great-tables">3. Enhancing Presentation with great-tables</h2>
 <section id="refining-table-presentation-with-pipeline" class="level3">
 <h3 class="anchored" data-anchor-id="refining-table-presentation-with-pipeline">3.0 Refining Table Presentation with Pipeline</h3>
 <p>The core concept of utilizing the pipeline is that each callable (typically a function) receives an instance of a <code>GT</code> object as the first input parameter and returns an instance of a <code>GT</code> object. This allows us to chain multiple callables together, forming a pipeline.</p>
-<p>In this section, we’ll gradually build each callable and observe how the table is constructed. Instead of rendering the table in HTML directly, we’ll use the <code>make_table()</code> function to generate multiple <strong>PNG</strong> tables, which internally calls <a href="https://posit-dev.github.io/great-tables/reference/GT.save.html#great_tables.GT.save">GT.save()</a>. These tables will be shown at the end of each subsection. This approach allows us to save each progress step in the <code>tables</code> folder. However, since the hyperlinks in the table won’t be functional when saved in <strong>PNG</strong> format, this is a minor drawback I hope you can accept. You can find the final table in HTML at <a href="./#final-table-in-html">3.15 Final table in HTML</a>.</p>
+<p>In this section, we’ll gradually build each callable and observe how the table is constructed. Instead of rendering the table in HTML directly, we’ll use the <code>make_table()</code> function to generate multiple <strong>PNG</strong> tables, which internally calls <a href="https://posit-dev.github.io/great-tables/reference/GT.save.html#great_tables.GT.save">GT.save()</a>. These tables will be shown at the end of each subsection. This approach allows us to save each progress step in the <code>tables</code> folder. However, since the hyperlinks in the table won’t be functional when saved in <strong>PNG</strong> format, this is a minor drawback I hope you can accept. You can find the final table in HTML at <a href="./#final-table-in-html">3.15 Final Table in HTML</a>.</p>
 <div id="6a4c5b87" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> make_table(</span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>    gtbl: GT,</span>
@@ -971,7 +971,7 @@ Tip
 <p><img src="./tables/13_final_table.png" class="img-fluid"></p>
 </section>
 <section id="constructing-the-pipeline" class="level3">
-<h3 class="anchored" data-anchor-id="constructing-the-pipeline">3.14 Constructing the pipeline</h3>
+<h3 class="anchored" data-anchor-id="constructing-the-pipeline">3.14 Constructing the Pipeline</h3>
 <p>With the <code>make_table</code> function provided at the beginning of this section, we can now easily generate our well-designed table.</p>
 <div id="3b6e1606" class="cell" data-execution_count="21">
 <div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>pipelines <span class="op">=</span> [</span>
@@ -994,12 +994,12 @@ Tip
 </div>
 </section>
 <section id="final-table-in-html" class="level3">
-<h3 class="anchored" data-anchor-id="final-table-in-html">3.15 Final table in HTML</h3>
+<h3 class="anchored" data-anchor-id="final-table-in-html">3.15 Final Table in HTML</h3>
 <p>You can find the final table in HTML format on <a href="https://jrycw.quarto.pub/euroncap-2023/">Quarto Pub</a>.</p>
 </section>
 </section>
 <section id="final-thoughts" class="level2">
-<h2 class="anchored" data-anchor-id="final-thoughts">4. Final thoughts</h2>
+<h2 class="anchored" data-anchor-id="final-thoughts">4. Final Thoughts</h2>
 <ul>
 <li><code>gt</code> is mainly maintained by <a href="https://github.com/rich-iannone"><span class="citation" data-cites="Richard">@Richard</span></a> and <a href="https://github.com/machow"><span class="citation" data-cites="Michael">@Michael</span></a>, with occasional contributions from others, including myself, <a href="https://gh.ycwu.space"><span class="citation" data-cites="jrycw">@jrycw</span></a>. Our goal is to port everything from <code>{gt}</code> to <code>gt</code>, and we welcome more contributors to help make <code>gt</code> even better. Join us if you’re interested in creating great tables!</li>
 <li>With more features being implemented in <code>gt</code>, such as functions similar to <a href="https://gt.rstudio.com/reference/fmt_url.html?q=fmt_url">fmt_url()</a> and <a href="https://gt.rstudio.com/reference/cols_merge.html">cols_merge()</a> in <code>{gt}</code>, many operations can be offloaded to <code>gt</code> instead of directly manipulating the Polars DataFrame. This flexibility allows users to choose the most convenient approach for their application, whether from the data layer or the presentation layer.</li>

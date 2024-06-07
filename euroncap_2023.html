@@ -572,7 +572,7 @@ Note
 <section id="refining-table-presentation-with-pipeline" class="level3">
 <h3 class="anchored" data-anchor-id="refining-table-presentation-with-pipeline">3.0 Refining Table Presentation with Pipeline</h3>
 <p>The core concept of utilizing the pipeline is that each callable (typically a function) receives an instance of a <code>GT</code> object as the first input parameter and returns an instance of a <code>GT</code> object. This allows us to chain multiple callables together, forming a pipeline.</p>
-<p>In this section, we’ll gradually build each callable and observe how the table is constructed. Instead of rendering the table in HTML directly, we’ll use the <code>make_table()</code> function to generate multiple <strong>PNG</strong> tables, which internally calls <a href="https://posit-dev.github.io/great-tables/reference/GT.save.html#great_tables.GT.save">GT.save()</a>. These tables will be shown at the end of each subsection. This approach allows us to save each progress step in the <code>tables</code> folder. However, since the hyperlinks in the table won’t be functional when saved in <strong>PNG</strong> format, this is a minor drawback I hope you can accept.</p>
+<p>In this section, we’ll gradually build each callable and observe how the table is constructed. Instead of rendering the table in HTML directly, we’ll use the <code>make_table()</code> function to generate multiple <strong>PNG</strong> tables, which internally calls <a href="https://posit-dev.github.io/great-tables/reference/GT.save.html#great_tables.GT.save">GT.save()</a>. These tables will be shown at the end of each subsection. This approach allows us to save each progress step in the <code>tables</code> folder. However, since the hyperlinks in the table won’t be functional when saved in <strong>PNG</strong> format, this is a minor drawback I hope you can accept. You can find the final table in HTML at <a href="./#final-table-in-html">3.15 Final table in HTML</a>.</p>
 <div id="6a4c5b87" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> make_table(</span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>    gtbl: GT,</span>
@@ -993,12 +993,17 @@ Tip
 <span id="cb30-17"><a href="#cb30-17" aria-hidden="true" tabindex="-1"></a>awesome_table <span class="op">=</span> make_table(GT(df), pipelines, save_png<span class="op">=</span><span class="va">False</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
+<section id="final-table-in-html" class="level3">
+<h3 class="anchored" data-anchor-id="final-table-in-html">3.15 Final table in HTML</h3>
+<p>You can find the final table in HTML format on <a href="https://jrycw.quarto.pub/euroncap-2023/">Quarto Pub</a>.</p>
+</section>
 </section>
 <section id="final-thoughts" class="level2">
 <h2 class="anchored" data-anchor-id="final-thoughts">4. Final thoughts</h2>
 <ul>
 <li><code>gt</code> is mainly maintained by <a href="https://github.com/rich-iannone"><span class="citation" data-cites="Richard">@Richard</span></a> and <a href="https://github.com/machow"><span class="citation" data-cites="Michael">@Michael</span></a>, with occasional contributions from others, including myself, <a href="https://gh.ycwu.space"><span class="citation" data-cites="jrycw">@jrycw</span></a>. Our goal is to port everything from <code>{gt}</code> to <code>gt</code>, and we welcome more contributors to help make <code>gt</code> even better. Join us if you’re interested in creating great tables!</li>
 <li>With more features being implemented in <code>gt</code>, such as functions similar to <a href="https://gt.rstudio.com/reference/fmt_url.html?q=fmt_url">fmt_url()</a> and <a href="https://gt.rstudio.com/reference/cols_merge.html">cols_merge()</a> in <code>{gt}</code>, many operations can be offloaded to <code>gt</code> instead of directly manipulating the Polars DataFrame. This flexibility allows users to choose the most convenient approach for their application, whether from the data layer or the presentation layer.</li>
+<li>Thanks to <a href="https://www.linkedin.com/in/curtiskephart/">Curtis</a> for suggesting rendering the table in HTML on Quarto Pub.</li>
 <li>This project is accomplished through collaboration with AI models.</li>
 </ul>
 </section>
